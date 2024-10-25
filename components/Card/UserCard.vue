@@ -21,17 +21,14 @@
               {{ user.name.first }} {{ user.name.last }}
             </span>
             <span class="text-gray-400 text-xs block"
-              >Asheville, North Carolina</span
+              >{{ user.location.city }}, {{ user.location.state }}</span
             >
           </div>
         </div>
         <img :src="posts[index]?.image" alt="Post image" />
         <div class="flex items-center justify-between mx-4 mt-3 mb-2">
           <div class="flex gap-5">
-            <img
-              :src="thumbsUp"
-              class="hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
-            />
+            <img :src="thumbsUp" class="" />
           </div>
         </div>
       </div>

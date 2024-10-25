@@ -3,6 +3,10 @@ export interface User {
     first: string;
     last: string;
   };
+  location: {
+    city: string;
+    state: string;
+  };
   picture: {
     large: string;
     thumbnail: string;
