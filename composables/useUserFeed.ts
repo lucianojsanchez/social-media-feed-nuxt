@@ -9,11 +9,13 @@ export interface User {
   };
 }
 
-export async function useFetchUsers() {
-  const { data, error, pending } = await useFetch<{ results: User[] }>('https://randomuser.me/api/?results=10');
+export function useFetchUsers() {
+  const { data, error, pending } = useFetch<{ results: User[] }>('https://randomuser.me/api/?results=10');
+  
   return {
     users: data.value ? data.value.results : [],
     error,
-    pending
+    pending,
   };
 }
+

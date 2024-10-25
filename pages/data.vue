@@ -26,6 +26,7 @@
   </template>
   
   <script setup lang="ts">
-  import { useUsersFeed } from '@/composables/useUsers';
-  const { users, error, pending } = await useFetchUsers();
+  import { useFetchUsers } from '@/composables/useFetchUsers';
+  
+  const { users, error, pending } = useFetchUsers();
   </script>
